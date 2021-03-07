@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+	crossorigin="anonymous">
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+		<nav th:fragment="navbar"
+		class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img id="main-img"
+				class="img-fluid d-inline-block mx-auto imagen-tbl" src="../img/logo2.png"
+				alt="logo" /><span class="font-weight-bold">JAEM</span><span class="font-weight-bold text-info">Group Shop car</span>
+			</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+ 
+        <a class="nav-link" th:href="@{/usercars}"><b>El coche de cada uno de nuestro Usuarios</b></a>
+         <a class="nav-link" th:href="@{/correopaginada}"><b>correo del cordinador</b></a> 
+		<a class="nav-link" th:href="@{/cardesadopaginada}"><b>Coches solicitados</b></a> 
+ <a class="nav-link" th:href="@{/shopcarts/list}"><b>Ordenes de Compra</b></a>
+        
+        
+             
+         
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="espacioblanco">&nbsp;</div><div class="espacioblanco">&nbsp;</div><div class="espacioblanco">&nbsp;</div>
+	<div class="container mt-5">
+		<h1>Finalized orders</h1>
+		<hr>
+
+		<div class="row">
+
+			<div class="col">
+
+
+				<table class="table table-dark table-striped mt-3">
+
+					<thead>
+						<tr>
+							<th>Nº pedido</th>
+							<th>Coches que se piden</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr th:each="cart: ${usercart}">
+
+							<td th:utext="${cart.id}"></td>
+
+							<td>
+
+								<div th:each="car: ${cart.cars}">
+									<span class="badge bg-info text-dark" th:utext="${car.model}"></span>
+
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div th:replace="layout :: footer"></div>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+		crossorigin="anonymous"></script>
+</body>
+</html>

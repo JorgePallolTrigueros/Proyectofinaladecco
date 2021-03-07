@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+	<nav th:fragment="navbar"
+		class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/">CONCESIONA</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+					<a class="nav-link" th:href="@{/cars}"><b>Coches en tienda</b></a>
+					<a class="nav-link" th:href="@{/usercars}"><b>El coche de
+							cada uno de nuestro Usuarios</b></a> <a class="nav-link"
+						th:href="@{/shopcart}"><b>SHOPCART</b></a> <a class="nav-link"
+						th:href="@{/shopcarts/list}"><b>Ordenes de Compra</b></a> <a
+						class="nav-link" th:href="@{/correo/new}"><b>Correo</b></a> <a
+						class="nav-link" th:href="@{/pagina1}"><b>Sobre Nosotros</b></a> <a
+						class="nav-link" th:href="@{/user/new}"><b>Registrate</b></a> <a
+						class="nav-link" th:href="@{/cochedeseado/new}"><b>Configura
+							tu coche deseado</b></a> <a class="nav-link" th:href="@{/carpaginada}"><b>coche
+							Paginado</b></a> <a class="nav-link" th:href="@{/correopaginada}"><b>correo
+							del cordinador</b></a>
+
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+	<footer th:fragment="footer" class="bg-light text-dark pt-5 pb-4">
+		<div class="container text-center text-md-left">
+			<div class="row text-center text-md-left">
+				<div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-info">
+						About Us</h5>
+					<hr class="mb-4" />
+					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+						Quod praesentium ullam ut? Maiores tempora, modi praesentium
+						voluptatibus illo vitae culpa! Vitae inventore iste libero
+						accusamus itaque nemo fugit labore iusto.</p>
+				</div>
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-info">
+						Let Us Help</h5>
+					<hr class="mb-4" />
+					<p>
+						<a href="#" class="text-dark" style="text-decoration: none">Your
+							Account</a>
+					</p>
+					<p>
+						<a href="#" class="text-dark" style="text-decoration: none">Your
+							Orders</a>
+					</p>
+					<p>
+						<a href="#" class="text-dark" style="text-decoration: none">Manage
+							Your Content And Devices</a>
+					</p>
+					<p>
+						<a href="#" class="text-dark" style="text-decoration: none">Help</a>
+					</p>
+				</div>
+				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+					<h5 class="text-uppercase mb-4 font-weight-bold text-info">
+						Contact</h5>
+					<hr class="mb-4" />
+					<p>
+					<li class="fas fa-home mr-3"></li> New York NY 2333, US
+					</p>
+					<p>
+					<li class="fas fa-envelope mr-3"></li> theproviders98@gmail.com
+					</p>
+					<p>
+					<li class="fas fa-phone mr-3"></li> +34 912652165
+					</p>
+					<p>
+					<li class="fas fa-print mr-3"></li> +34 912652165
+					</p>
+				</div>
+				<hr class="mb-4" />
+				<div class="row d-flex justify-content-center">
+					<div>
+						<p>
+							Copyright 2021 All Rights Reserved By : <a href="#"
+								style="text-decoration: none"> <strong class="text-info">The
+									Providers</strong>
+							</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="row d-flex justify-content-center">
+					<div class="text-center">
+						<ul class="list-unstyled list-inline">
+							<li class="list-inline-item"><a href="#" class="text-dark"><i
+									class="fab fa-facebook"></i> </a></li>
+							<li class="list-inline-item"><a href="#" class="text-dark"><i
+									class="fab fa-twitter"></i> </a></li>
+							<li class="list-inline-item"><a href="#" class="text-dark"><i
+									class="fab fa-google-plus"></i> </a></li>
+							<li class="list-inline-item"><a href="#" class="text-dark"><i
+									class="fab fa-linkedin-in"></i> </a></li>
+							<li class="list-inline-item"><a href="#" class="text-dark"><i
+									class="fab fa-youtube"></i> </a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+</html>

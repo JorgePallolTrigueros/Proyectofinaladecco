@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+		crossorigin="anonymous">
+		
+	<!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+	
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<nav th:fragment="navbar"
+		class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img id="main-img"
+				class="img-fluid d-inline-block mx-auto imagen-tbl" src="img/logo2.png"
+				alt="logo" /><span class="font-weight-bold">JAEM</span><span class="font-weight-bold text-info">Group Shop car</span>
+			</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+      
+                <a class="nav-link" th:href="@{/cars}"><b>Coches en tienda</b></a>
+        		<a class="nav-link" th:href="@{/shopcart}"><b>SHOPCART</b></a>
+        		
+         		<a class="nav-link" th:href="@{/correo1/new}"><b>Correo</b></a>
+        		<a class="nav-link" th:href="@{/pagina6}"><b>Sobre Nosotros</b></a>
+        		<a class="nav-link" th:href="@{/cochedeseado/new}"><b>Configura tu coche deseado</b></a>                    
+         		 <a class="nav-link" th:href="@{/shopcarts/list}"><b>A</b></a>
+      
+      </div>
+    </div>
+  </div>
+</nav>
+
+	<div class="container mt-5">
+		<h1>Vista de coches  <span th:text="${car.id}"></span></h1>
+		<hr>
+		<div class="row">
+
+			<div class="col-8">
+
+				<form th:action="@{/cars}" th:object="${car}" method="POST">
+
+					<input type="hidden" th:field="*{id}">
+					<input type="hidden" th:field="*{urlImg}">
+					
+					
+					<div class="mb-3">
+						<label for="model" class="form-label">Nombre</label>
+						 <input type="text" class="form-control" id="model" th:field="*{model}">
+					</div>
+					
+					<div class="mb-3">
+					  <label for="description" class="form-label">Descripcion</label>
+					  <textarea class="form-control" id="description" rows="3" th:field="*{description}"></textarea>
+					</div>
+					
+					<div class="mb-3">
+						<label for="price" class="form-label">Precio</label>
+						 <input type="number" class="form-control" id="price" th:field="*{price}">
+					</div>
+					
+
+					
+					
+				
+					<label class="form-check-label" for="manufacturer">Manufacure</label>
+					<select id="manufacturer" th:field="*{manufacturer}" class="form-select" >
+					  <option th:each="manufacturer: ${manufacturer}" th:value="${manufacturer.id}" th:text="${manufacturer.name}"></option>
+					</select>
+					
+					
+
+
+
+					<select id="etiquetas" th:field="*{etiquetas}" class="form-select" multiple>
+					  <option th:each="genre: ${etiquetasDBList}" th:value="${genre.id}" th:text="${genre.name}"></option>
+					</select>
+					
+					<button type="submit" class="mt-5 btn btn-success">Guardar</button>
+
+
+				</form>
+
+
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="mt-5">
+			
+			<a class="btn btn-info text-white" th:href="@{/cars}">Volver</a>
+				<a class="btn btn-primary text-white"
+					th:href="@{/movies/{id}/view(id=${car.id})}">Ver</a> <a
+					class="btn btn-danger text-white"
+					th:href="@{/movies/{id}/delete(id=${car.id})}">Eliminar</a>
+			</div>
+		</div>
+
+
+	</div>
+
+<div th:replace="layout :: footer"></div>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+		crossorigin="anonymous"></script>
+</body>
+</html>

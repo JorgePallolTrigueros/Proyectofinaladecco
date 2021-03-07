@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<nav th:fragment="navbar"
+		class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img id="main-img"
+				class="img-fluid d-inline-block mx-auto imagen-tbl" src="img/logo2.png"
+				alt="logo" /><span class="font-weight-bold">JAEM</span><span class="font-weight-bold text-info">Group Shop car</span>
+			</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+ <a class="nav-link" th:href="@{/cars}"><b>Coches en tienda</b></a>
+        <a class="nav-link" th:href="@{/usercars}"><b>El coche de cada uno de nuestro Usuarios</b></a>
+         <a class="nav-link" th:href="@{/correopaginada}"><b>correo del cordinador</b></a> 
+		<a class="nav-link" th:href="@{/cardesadopaginada}"><b>Coches solicitados</b></a> 
+ <a class="nav-link" th:href="@{/shopcarts/list}"><b>Ordenes de Compra</b></a>
+        
+        
+             
+         
+      </div>
+    </div>
+  </div>
+</nav>
+
+<footer th:fragment="footer">
+<div class="text-center">
+&copy; Copyright 2021
+</div>
+
+</footer>
+
+</body>
+</html>

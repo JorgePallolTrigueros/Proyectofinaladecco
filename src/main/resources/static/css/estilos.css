@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+:root{
+	--blue: #0a7fe0;
+    --blue-light: #daeeff;
+    --blue-lighest: #f2f6fa;
+    --yellow: gold;
+    --black: #000;
+    --red: #ff1313;
+    --green: #08cb5f;
+    --green-light: #bcffc6;
+    --yellow-warning: #fff3cd;
+    --gray-middle: #7d7d7d;
+    --gray-light: #ccc;
+    --gray-darker: #222;
+    --gray-border: #ced4da;
+    --primary: #0a7fe0;
+    --positive: #0a7fe0;
+    --secondary: #daeeff;
+    --success: #08cb5f;
+    --success-dark: #069a48;
+    --warning: gold;
+    --negative: #ff1313;
+    --light: #ccc;
+    --dark: #222;
+    --gray: #3d3d3d;
+    --blue-dark: #036;
+    --info: #0a7fe0;
+    --alert: #ff1313;
+    --black-333: #333;
+    --white: #fff;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family: -apple-system,system-ui,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,sans-serif;
+    --font-family-sans-serif: -apple-system,system-ui,BlinkMacSystemFont,Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+.espacioblanco
+{
+	  height: 1600px;
+  width: 50%;
+}
+.espacioblanco1
+{
+	  height: 200px;
+  width: 50%;
+}
+html, body {
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+html {
+    font-size: 14px;
+}
+body, html {
+    height: 100%;
+}
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+html {
+    box-sizing: border-box;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+html {
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 16px;
+}
+html {
+    box-sizing: border-box;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+user agent stylesheet
+html {
+    display: block;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+::selection {
+    background-color: #cce2ff;
+    color: rgba(0,0,0,.87);
+}
+
+.imagen-tbl{
+	margin-right: 4px;
+}
+
